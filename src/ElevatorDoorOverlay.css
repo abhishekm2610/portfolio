@@ -1,0 +1,33 @@
+.door-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.door {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background: #111;
+  transition: transform 1s ease-in-out;
+}
+
+.left-door {
+  left: 0;
+  transform: translateX(0%);
+}
+.right-door {
+  right: 0;
+  transform: translateX(0%);
+}
+
+.door-overlay.open .left-door {
+  transform: translateX(-100%);
+}
+.door-overlay.open .right-door {
+  transform: translateX(100%);
+}

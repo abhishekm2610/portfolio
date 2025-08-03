@@ -1,0 +1,85 @@
+/* src/floors/FloorStyles.css */
+
+.floor-viewport {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: url("/assets/floor-bg.png") no-repeat center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.floor-viewport::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* dark overlay for readability */
+  z-index: 0;
+}
+
+.floor-content {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 2rem;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  color: #fff;
+  max-width: 700px;
+  width: 90%;
+  text-align: center;
+}
+
+.floor-content h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.floor-content p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.floor-content ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: 0.95rem;
+}
+
+.floor-content li {
+  margin-bottom: 0.5rem;
+}
+.floor-experience {
+  background: url("/assets/floor-bg.png") no-repeat center center;
+  background-size: cover;
+}
+
+.floor-education {
+  background: url("/assets/floor-bg.png") no-repeat center center;
+  background-size: cover;
+}
+
+.floor-projects {
+  background: url("/assets/floor-bg.png") no-repeat center center;
+  background-size: cover;
+}
+
+.floor-awards {
+  background: url("/assets/floor-bg.png") no-repeat center center;
+  background-size: cover;
+}
+
+.floor-contact {
+  background: url("/assets/floor-bg.png") no-repeat center center;
+  background-size: cover;
+}
+
+.floor-lobby {
+  background: url("/assets/lobby-bg-1.png") no-repeat center center;
+  background-size: cover;
+}

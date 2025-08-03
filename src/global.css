@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  background: #000;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+}
+
+.elevator-shell {
+  position: relative;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.frame-img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.floor-window {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+}
+
+.elevator-shell > section {
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* Floor content styling */
+.elevator-shell section > * {
+  max-width: 800px;
+  text-align: center;
+}
+
+/* Sticky elevator buttons */
+.floor-nav {
+  position: fixed;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  z-index: 2;
+}
+
+.floor-nav button,
+.lobby-btn {
+  padding: 0.5rem 1rem;
+  background: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 0.85rem;
+  color: #000;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.floor-nav button:hover {
+  transform: scale(1.05);
+}
